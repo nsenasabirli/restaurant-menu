@@ -1,0 +1,174 @@
+﻿<Window x:Class="RestoranMenu.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="World Cuisine" Height="500" Width="735">
+    <Grid>
+        <MediaElement Source="C:\Users\k_m_s\Downloads\Sfs.gif" LoadedBehavior="Play" UnloadedBehavior="Stop" IsMuted="True" Stretch="UniformToFill"/>
+        <Button x:Name="btnOpen_the_Menu" Content="Open the Menu" FontSize="14" FontWeight="Bold" Click="ShowMenu_Click" VerticalAlignment="Top" Margin="305,196,305,0" FontFamily="Sylfaen" Background="#FF265870" Foreground="White"/>
+        <Popup Name="menuPopup" StaysOpen="False" Placement="Center" IsOpen="False">
+            <Border BorderBrush="black" BorderThickness="1" Background="LightGoldenrodYellow" CornerRadius="5">
+                <StackPanel>
+                    <TreeView Name="menuTreeView" Width="350" Height="350" Margin="5">
+                        <TreeViewItem Header="Starters" FontWeight="UltraBlack">
+                            <TreeViewItem Header="Soup" FontWeight="Bold">
+                                <StackPanel Orientation="Horizontal" Height="40" Margin="1">
+                                    <Label Width="220" Content="Lentil Soup (Turkish Cuisine) - $13"  FontWeight="Normal"/>
+                                    <Image Name="img1" Stretch="Uniform" Source="C:\Users\k_m_s\OneDrive\Masaüstü\images\lentilsoup.png" MouseEnter="img_MouseEnter" MouseLeave="img_MouseLeave" />
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Height="40" Margin="1">
+                                    <Label Width="220" Content="Wonton Soup (Chinese Cuisine) - $15" FontWeight="Normal"/>
+                                    <Image Name="img2" Stretch="Uniform" Source="C:\Users\k_m_s\OneDrive\Masaüstü\images\wontonsoup.png" MouseEnter="img_MouseEnter" MouseLeave="img_MouseLeave" />
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Height="40" Margin="1">
+                                    <Label Width="220" Content="Onion Soup (French Cuisine) - $10" FontWeight="Normal"/>
+                                    <Image Name="img3" Stretch="Uniform" Source="C:\Users\k_m_s\OneDrive\Masaüstü\images\onionsoup.png" MouseEnter="img_MouseEnter" MouseLeave="img_MouseLeave" />
+                                </StackPanel>
+                            </TreeViewItem>
+                            <TreeViewItem Header="Salads and Bowls" FontWeight="Bold">
+                                <StackPanel Orientation="Horizontal" Height="40" Margin="1">
+                                    <Label Width="220" Content="Acai Bowl (Brazillian Cuisine) - $15" FontWeight="Normal"/>
+                                    <Image Name="img4" Stretch="Uniform" Source="C:\Users\k_m_s\OneDrive\Masaüstü\images\acaibowl.png" MouseEnter="img_MouseEnter" MouseLeave="img_MouseLeave" />
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Height="40" Margin="1">
+                                    <Label Width="220" Content="Gavurdagi Salad (Turkish Cuisine) - $9" FontWeight="Normal"/>
+                                    <Image Name="img5" Stretch="Uniform" Source="C:\Users\k_m_s\OneDrive\Masaüstü\images\gavurdagisalata.png" MouseEnter="img_MouseEnter" MouseLeave="img_MouseLeave" />
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Height="40" Margin="1">
+                                    <Label Width="220" Content="Caesar Salad (Italian Cuisine) - $11" FontWeight="Normal"/>
+                                    <Image Name="img6" Stretch="Uniform" Source="C:\Users\k_m_s\OneDrive\Masaüstü\images\caesarsalad.png" MouseEnter="img_MouseEnter" MouseLeave="img_MouseLeave" />
+                                </StackPanel>
+                            </TreeViewItem>
+                        </TreeViewItem>
+                        <TreeViewItem Header="Main Dishes" FontWeight="UltraBlack">
+                            <StackPanel Orientation="Horizontal" Height="40" Margin="1">
+                                <Label Width="220" Content="Adana Kebap (Turkish Cuisine) - $40" FontWeight="Normal"/>
+                                <Image Name="img7" Stretch="Uniform" Source="C:\Users\k_m_s\OneDrive\Masaüstü\images\adanakebap.png" MouseEnter="img_MouseEnter" MouseLeave="img_MouseLeave" />
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Height="40" Margin="1">
+                                <Label Width="220" Content="Fajita (Tex-Mex Cuisine) - $35" FontWeight="Normal"/>
+                                <Image Name="img8" Stretch="Uniform" Source="C:\Users\k_m_s\OneDrive\Masaüstü\images\fajita.png" MouseEnter="img_MouseEnter" MouseLeave="img_MouseLeave" />
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Height="40" Margin="1">
+                                <Label Width="220" Content="Paella (Spanish Cuisine) - $50" FontWeight="Normal" ToolTip="Chef Elif's Masterpiece"/>
+                                <Image Name="img9" Stretch="Uniform" Source="C:\Users\k_m_s\OneDrive\Masaüstü\images\paella.png" MouseEnter="img_MouseEnter" MouseLeave="img_MouseLeave" />
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Height="40" Margin="1">
+                                <Label Width="220" Content="Fettucini Alfredo (Italian Cuisine) - $25" FontWeight="Normal"/>
+                                <Image Name="img10" Stretch="Uniform" Source="C:\Users\k_m_s\OneDrive\Masaüstü\images\fettucini.png" MouseEnter="img_MouseEnter" MouseLeave="img_MouseLeave" />
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Height="40" Margin="1">
+                                <Label Width="220" Content="Baked Norway Salmon - $40" FontWeight="Normal"/>
+                                <Image Name="img11" Stretch="Uniform" Source="C:\Users\k_m_s\OneDrive\Masaüstü\images\salmon.png" MouseEnter="img_MouseEnter" MouseLeave="img_MouseLeave" />
+                            </StackPanel>
+                        </TreeViewItem>
+                        <TreeViewItem Header="Special Meals" FontWeight="UltraBlack">
+                            <TreeViewItem Header="Family Meals" FontWeight="Bold">
+                                <StackPanel Orientation="Horizontal" Height="40" Margin="1">
+                                    <Label Width="220" Content="Korean Barbecue - $60" FontWeight="Normal" ToolTip="Chef Sena's Masterpiece"/>
+                                    <Image Name="img12" Stretch="Uniform" Source="C:\Users\k_m_s\OneDrive\Masaüstü\images\bbq.png" MouseEnter="img_MouseEnter" MouseLeave="img_MouseLeave" />
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Height="40" Margin="1">
+                                    <Label Width="220" Content="Sushi (Japanese Cuisine) - $65" FontWeight="Normal"/>
+                                    <Image Name="img13" Stretch="Uniform" Source="C:\Users\k_m_s\OneDrive\Masaüstü\images\sushi.png" MouseEnter="img_MouseEnter" MouseLeave="img_MouseLeave" />
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Height="40" Margin="1">
+                                    <Label Width="220" Content="Pizza (3-5 persons) - $55" FontWeight="Normal"/>
+                                    <Image Name="img14" Stretch="Uniform" Source="C:\Users\k_m_s\OneDrive\Masaüstü\images\pizza.png" MouseEnter="img_MouseEnter" MouseLeave="img_MouseLeave" />
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Height="40" Margin="1">
+                                    <Label Width="220" Content="Turkish Wet Burger (3-5 persons) - $70" FontWeight="Normal"/>
+                                    <Image Name="img15" Stretch="Uniform" Source="C:\Users\k_m_s\OneDrive\Masaüstü\images\wetburger.png" MouseEnter="img_MouseEnter" MouseLeave="img_MouseLeave" />
+                                </StackPanel>
+                            </TreeViewItem>
+                            <TreeViewItem Header="Kids Meals" FontWeight="Bold">
+                                <StackPanel Orientation="Horizontal" Height="40" Margin="1">
+                                    <Label Width="220" Content="Hamburger - $15" FontWeight="Normal"/>
+                                    <Image Name="img16" Stretch="Uniform" Source="C:\Users\k_m_s\OneDrive\Masaüstü\images\hamburger.png" MouseEnter="img_MouseEnter" MouseLeave="img_MouseLeave" />
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Height="40" Margin="1">
+                                    <Label Width="220" Content="Chicken Tenders - $15" FontWeight="Normal"/>
+                                    <Image Name="img17" Stretch="Uniform" Source="C:\Users\k_m_s\OneDrive\Masaüstü\images\chickentenders.png" MouseEnter="img_MouseEnter" MouseLeave="img_MouseLeave" />
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Height="40" Margin="1">
+                                    <Label Width="220" Content="Kofte - $20" FontWeight="Normal"/>
+                                    <Image Name="img18" Stretch="Uniform" Source="C:\Users\k_m_s\OneDrive\Masaüstü\images\kofte.png" MouseEnter="img_MouseEnter" MouseLeave="img_MouseLeave" />
+                                </StackPanel>
+                            </TreeViewItem>
+                        </TreeViewItem>
+                        <TreeViewItem Header="Desserts" FontWeight="UltraBlack">
+                            <StackPanel Orientation="Horizontal" Height="40" Margin="1">
+                                <Label Width="220" Content="Baklava (Turkish Cuisine) - $25" FontWeight="Normal"/>
+                                <Image Name="img19" Stretch="Uniform" Source="C:\Users\k_m_s\OneDrive\Masaüstü\images\baklava.png" MouseEnter="img_MouseEnter" MouseLeave="img_MouseLeave" />
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Height="40" Margin="1">
+                                <Label Width="220" Content="Tiramisu (Italian Cuisine) - $15" FontWeight="Normal"/>
+                                <Image Name="img20" Stretch="Uniform" Source="C:\Users\k_m_s\OneDrive\Masaüstü\images\tiramisu.png" MouseEnter="img_MouseEnter" MouseLeave="img_MouseLeave" />
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Height="40" Margin="1">
+                                <Label Width="220" Content="Om Ali (Egyptian Cuisine) - $10" FontWeight="Normal" ToolTip="Chef Rawan's Masterpiece"/>
+                                <Image Name="img21" Stretch="Uniform" Source="C:\Users\k_m_s\OneDrive\Masaüstü\images\omali.png" MouseEnter="img_MouseEnter" MouseLeave="img_MouseLeave" />
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Height="40" Margin="1">
+                                <Label Width="220" Content="San Sebastian Cheesecake - $13" FontWeight="Normal" ToolTip="Chef Sedef's Masterpiece"/>
+                                <Image Name="img22" Stretch="Uniform" Source="C:\Users\k_m_s\OneDrive\Masaüstü\images\cheesecake.png" MouseEnter="img_MouseEnter" MouseLeave="img_MouseLeave" />
+                            </StackPanel>
+                        </TreeViewItem>
+                        <TreeViewItem Header="Drinks" FontWeight="UltraBlack">
+                            <TreeViewItem Header="Hot" FontWeight="Bold">
+                                <StackPanel Orientation="Horizontal" Height="40" Margin="1">
+                                    <Label Width="220" Content="Turkish Black Tea - $5" FontWeight="Normal"/>
+                                    <Image Name="img23" Stretch="Uniform" Source="C:\Users\k_m_s\OneDrive\Masaüstü\images\tea.png" MouseEnter="img_MouseEnter" MouseLeave="img_MouseLeave" />
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Height="40" Margin="1">
+                                    <Label Width="220" Content="Espresso - $7" FontWeight="Normal"/>
+                                    <Image Name="img24" Stretch="Uniform" Source="C:\Users\k_m_s\OneDrive\Masaüstü\images\espresso.png" MouseEnter="img_MouseEnter" MouseLeave="img_MouseLeave" />
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Height="40" Margin="1">
+                                    <Label Width="220" Content="Turkish Coffee - $10" FontWeight="Normal"/>
+                                    <Image Name="img25" Stretch="Uniform" Source="C:\Users\k_m_s\OneDrive\Masaüstü\images\turkishcoffee.png" MouseEnter="img_MouseEnter" MouseLeave="img_MouseLeave" />
+                                </StackPanel>
+                            </TreeViewItem>
+                            <TreeViewItem Header="Cold" FontWeight="Bold">
+                                <StackPanel Orientation="Horizontal" Height="40" Margin="1">
+                                    <Label Width="220" Content="Water - $1" FontWeight="Normal"/>
+                                    <Image Name="img26" Stretch="Uniform" Source="C:\Users\k_m_s\OneDrive\Masaüstü\images\water.png" MouseEnter="img_MouseEnter" MouseLeave="img_MouseLeave" />
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Height="40" Margin="1">
+                                    <Label Width="220" Content="Soju (Korean) - $9" FontWeight="Normal"/>
+                                    <Image Name="img27" Stretch="Uniform" Source="C:\Users\k_m_s\OneDrive\Masaüstü\images\soju.png" MouseEnter="img_MouseEnter" MouseLeave="img_MouseLeave" />
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Height="40" Margin="1">
+                                    <Label Width="220" Content="Japanese Soda - $8" FontWeight="Normal"/>
+                                    <Image Name="img28" Stretch="Uniform" Source="C:\Users\k_m_s\OneDrive\Masaüstü\images\japanesesoda.png" MouseEnter="img_MouseEnter" MouseLeave="img_MouseLeave" />
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Height="40" Margin="1">
+                                    <Label Width="220" Content="Iced Americano - $5" FontWeight="Normal"/>
+                                    <Image Name="img29" Stretch="Uniform" Source="C:\Users\k_m_s\OneDrive\Masaüstü\images\icedamericano.png" MouseEnter="img_MouseEnter" MouseLeave="img_MouseLeave" />
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Height="40" Margin="1">
+                                    <Label Width="220" Content="Milkshake - $3" FontWeight="Normal"/>
+                                    <Image Name="img30" Stretch="Uniform" Source="C:\Users\k_m_s\OneDrive\Masaüstü\images\milkshake.png" MouseEnter="img_MouseEnter" MouseLeave="img_MouseLeave" />
+                                </StackPanel>
+                            </TreeViewItem>
+                        </TreeViewItem>
+                    </TreeView>
+                    <Popup Name="popFullScale" Placement="Right" HorizontalOffset="5" VerticalOffset="5">
+                        <Image Name="imgFullScale" Stretch="None"/>
+                    </Popup>
+                    <Button x:Name="btnClose" Content="Close" FontSize="14" FontWeight="Bold" Click="CloseMenu_click" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="10" FontFamily="Sylfaen" Background="#FF702626" Foreground="White"/>
+                </StackPanel>
+            </Border>
+        </Popup>
+        <TextBlock x:Name="Restaurant_Information" Margin="182,70,182,0" TextWrapping="Wrap" Text="Enjoy our delightful meals with the colorful tastes from all around the world. Our dishes was handpicked by the most prestegious chefs in the world. Presented to you with heartwarming display and mouthwatering deliciousness." VerticalAlignment="Top" Height="121" Foreground="White" FontFamily="Lucida Handwriting" FontSize="14" TextAlignment="Center"/>
+        <TextBlock x:Name="Restaurant_name" Margin="191,26,191,0" TextWrapping="Wrap" Text="Welcome to WOW Restaurant" VerticalAlignment="Top" Height="25" FontFamily="Segoe UI Black" FontSize="20" Foreground="#FFE3F624" HorizontalAlignment="Center"/>
+        <TextBlock x:Name="Chefs2" HorizontalAlignment="Left" Margin="541,381,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="127" Width="175" FontFamily="Lucida Handwriting" Foreground="White">
+    Chef Sedef Nur Uğurlu 
+    <LineBreak/>
+    Chef Rawan ElShenieky 
+    <LineBreak/>
+    Chef Elif Naz Kadayıfçı
+    <LineBreak/>
+    Chef Nahide Sena Sabırlı
+        </TextBlock>
+    </Grid>
+</Window>
